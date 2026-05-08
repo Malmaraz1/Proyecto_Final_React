@@ -1,5 +1,5 @@
 import  { useState } from "react";
-import "./contador.css";
+import "./Contador.css";
 function Contador() {
   // 1. Declarar el estado 'count' inicializado en 0
   const [count, setCount] = useState(0);

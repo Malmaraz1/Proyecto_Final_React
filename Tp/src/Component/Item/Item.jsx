@@ -1,5 +1,5 @@
 
-import "./Item.css"
+import "./Item.css" 
 export const Item = ({ title, image, price  ,children}) => {
   return (
     <article className="item">
