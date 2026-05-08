@@ -1,6 +1,6 @@
 import Contador from "../Contador/contador";
 import { Item } from "../Item/Item";
-import "./itemDetail.css";
+import "./ItemDetail.css";
 export const ItemDetail = ({ item }) => {
 
  
