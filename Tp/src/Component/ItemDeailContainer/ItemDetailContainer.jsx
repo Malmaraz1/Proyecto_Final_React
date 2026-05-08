@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-
+import "./itemDetailContainer.css";
 export const ItemDetailContainer = () => {
   const [productDetail, setProductDetail] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -30,8 +30,9 @@ export const ItemDetailContainer = () => {
 
   return (
     <section>
-      <h1>Detalles del producto</h1>
+      
       <div className="products-container">
+     
         <ItemDetail item={productDetail} />
       </div>
     </section>

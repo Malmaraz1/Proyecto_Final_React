@@ -1,0 +1,12 @@
+.contador button {
+    background-color: rgb(106, 103, 103);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.contador span {
+    margin:  10px;
+    font-size: 20px;
+}
+      
