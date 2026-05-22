@@ -9,9 +9,11 @@ import { ItemDetailContainer } from "./Component/ItemDeailContainer/ItemDetailCo
 import { CarritoContainer } from "./Component/Carrito/CarritoContainer";
 function App() {
   return (
-    <>
+    
+   <div className="app-container">
+    
       <Header></Header>
-      <main>
+      <main className="main-content" >
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/product/:id" element={<ItemDetailContainer />} />
@@ -20,7 +22,9 @@ function App() {
       </main>
 
       <Footer></Footer>
-    </>
+     
+    </div>
+     
   );
 }
 

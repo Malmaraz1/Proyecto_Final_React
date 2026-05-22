@@ -1,6 +1,15 @@
 .products-container{
     display: flex;
-    flex-direction: column;
-    align-items: center;
    
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+.detail-page-wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  min-height: 80vh;        
+  width: 100%;
 }

@@ -29,7 +29,7 @@ export const ItemDetailContainer = () => {
   if (!productDetail) return <p>Producto no encontrado</p>;
 
   return (
-    <section>
+    <section className="detail-page-wrapper">
       
       <div className="products-container">
      
