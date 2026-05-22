@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import red_Envio from "../../assets/red_Envio.jpg";
+
 import "./nav.css";
 
 export const Nav = () => {
@@ -8,11 +8,9 @@ export const Nav = () => {
       <ul className="nav_list">
         <li>
           <Link to="/" className="cart_link-home">
-          <img 
-              src={red_Envio}
-              alt="Logo Mi Tienda" 
-              className="nav-logo-img" 
-            />
+          <div className="logo-container">
+          <img src="/red_Envio.jpg" alt="Logo Mi Tienda" className="nav-logo-img" />
+          </div>
           </Link>
         </li>
         
