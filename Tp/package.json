@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-     "dev": "nodemon --watch src --ext js,jsx,ts,tsx,css,html --exec \"vite\"",
+    "dev": "nodemon --watch src --ext js,jsx,ts,tsx,css,html --exec \"vite\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^12.14.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-router-dom": "^7.14.2"

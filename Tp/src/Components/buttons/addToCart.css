@@ -1,0 +1,8 @@
+.btn-danger{
+    background-color: rgb(106, 103, 103);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}

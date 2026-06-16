@@ -1,0 +1,47 @@
+.cart-item-row {
+    display: flex;
+    align-items: center; 
+    gap: 20px;          
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    max-width: 800px;   
+}
+.cart-item-image-container{
+   
+    
+    width: 150px;
+    height: 150px;
+}
+.cart-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.cart-item-info {
+    display: flex;
+    flex-direction: column; 
+    gap: 8px;             
+}
+.btn-remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+}
+.cart-item-price {
+    margin: 0;
+    font-weight: bold;
+    color: #111;
+}
+.cart-item-info h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+.cart-item-actions {
+    display: flex;
+    align-items: center;    /* Centra el contador y el tacho horizontalmente entre sí */
+    gap: 15px;             /* Espacio entre el contador y el botón del tacho */
+    width: max-content;    /* CRUCIAL: Evita que los botones se estiren al ancho del padre */
+}
