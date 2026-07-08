@@ -41,7 +41,7 @@
 }
 .cart-item-actions {
     display: flex;
-    align-items: center;    /* Centra el contador y el tacho horizontalmente entre sí */
-    gap: 15px;             /* Espacio entre el contador y el botón del tacho */
-    width: max-content;    /* CRUCIAL: Evita que los botones se estiren al ancho del padre */
+    align-items: center;    
+    gap: 15px;             
+    width: max-content;   
 }

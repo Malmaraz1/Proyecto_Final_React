@@ -55,5 +55,6 @@ export const CartProvider = ({ children }) => {
     checkout,
   };
 
-  return <CartContext.Provider value={values}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={values}>
+    {children}</CartContext.Provider>;
 };

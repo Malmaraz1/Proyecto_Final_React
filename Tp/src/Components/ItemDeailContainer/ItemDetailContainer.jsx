@@ -2,24 +2,18 @@ import { useEffect, useState } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import "./ItemDetailContainer.css";
+import { getProductoById } from "../../services/productservice";
 export const ItemDetailContainer = () => {
   const [productDetail, setProductDetail] = useState([]);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((response) => response.json())
-
-      .then((data) => {
-        const item = data.find((element) => String(element.id) === id);
-        if (item) {
-          setProductDetail(item);
-          return;
-        }
-        console.log(data.element.id);
-        throw new Error("Elemento no encontrado");
+   
+      getProductoById(id).then((data) => {
+       setProductDetail(data);
       })
+      
       .catch((err) => console.log(err))
 
       .finally(() => setLoading(false));
