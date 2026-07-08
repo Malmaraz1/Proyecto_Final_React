@@ -21,7 +21,7 @@ export const Login = () => {
     e.preventDefault();
 
     try {
-      //Viene del contexto
+  
       await login(formData.email, formData.password);
       console.log("Login exitoso");
       navigate("/admin", { replace: true });

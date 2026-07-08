@@ -1,9 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
+import {LogoutButton} from "../../login/Logout"
 
-import { useAuth } from "../../../context/AuthContext";
 
 export const Dashboard = () => {
-  const { logout } = useAuth();
+ 
+
 
   return (
     <div className="dashboard">
@@ -14,9 +15,7 @@ export const Dashboard = () => {
           <Link className="btn primary" to="/">
             Volver a la tienda
           </Link>
-          <button className="btn bg-delete primary" onClick={logout}>
-            Cerrar sesión
-          </button>
+          <LogoutButton />
         </div>
       </header>
 
