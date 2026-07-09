@@ -7,64 +7,74 @@ export const ProductFormUI = ({
   onSubmit,
 }) => {
   return (
-    <section>
+    <section className="product-form-container">
       <form className="product-from" onSubmit={onSubmit}>
         <h2>Agregar nuevo producto</h2>
 
         <div>
-          <label>Nombre</label>
+          <label htmlFor="name">Nombre</label>
           <input
             type="text"
+            id="name"
             name="name"
             value={product.name}
             onChange={onChange}
             required
           />
-          {errors.name && <p className="error">{errors.name}</p>}
+          {errors.name && <p className="error">⚠️ {errors.name}</p>}
         </div>
 
         <div>
-          <label>Category</label>
+          <label htmlFor="category">Categoría</label>
           <input
             type="text"
+            id="category"
             name="category"
             value={product.category}
             onChange={onChange}
             required
           />
-          {errors.category && <p className="error">{errors.category}</p>}
+          {errors.category && <p className="error">⚠️ {errors.category}</p>}
         </div>
+
         <div>
-          <label>Precio</label>
+          <label htmlFor="price">Precio</label>
           <input
             type="text"
+            id="price"
             name="price"
             value={product.price}
             onChange={onChange}
             required
           />
-          {errors.price && <p className="error">{errors.price}</p>}
+          {errors.price && <p className="error">⚠️ {errors.price}</p>}
         </div>
+
         <div>
-          <label>description</label>
+          <label htmlFor="description">Descripción</label>
+          {/* Cambiado a input text clásico para respetar tu estructura original, pero con ID para accesibilidad */}
           <input
             type="text"
+            id="description"
             name="description"
             value={product.description}
             onChange={onChange}
             required
           />
-          {errors.description && <p className="error">{errors.description}</p>}
+          {errors.description && <p className="error">⚠️ {errors.description}</p>}
         </div>
+
         <div>
-          <label>Imagen:</label>
-          <input type="file" accept="image/*" onChange={onFileChange} />
-          {errors.file && <p className="error">{errors.file}</p>}
+          <label htmlFor="image-file">Imagen del producto</label>
+          <input id="image-file" type="file" accept="image/*" onChange={onFileChange} />
+          {errors.file && <p className="error">⚠️ {errors.file}</p>}
         </div>
+
         <button className="btn" type="submit" disabled={loading}>
-          {loading ? "Guardando..." : "Guardar"}
+          {loading ? "Guardando..." : "Guardar Producto"}
         </button>
-        {errors.general && <p className="error">{errors.general}</p>}
+
+        {errors.general && <p className="error general-error">❌ {errors.general}</p>}
       </form>
     </section>
   );

@@ -1,0 +1,113 @@
+product-form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.product-form-container {
+  max-width: 550px; /* Un tamaño ideal para que no se estire */
+  margin: 50px auto; /* 50px arriba/abajo para despegarlo del nav, 'auto' lo centra horizontalmente */
+  padding: 0 20px;   /* Margen interno para que no pegue en los bordes en celulares */
+}
+
+
+.product-from {
+  background-color: var(--background-card, #ffffff);
+  border: 1.5px solid var(--border-color, #e5e7eb);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.product-from > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.product-from label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main, #374151);
+  margin-bottom: 6px;
+  text-transform: capitalize; 
+}
+
+
+.product-from input[type="text"] {
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1.5px solid var(--border-color, #dcdcdc);
+  border-radius: 8px;
+  background-color: var(--background-app, #fafafa);
+  color: var(--text-main, #333333);
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.product-from input[type="text"]:focus {
+  border-color: #6366f1;
+  background-color: var(--background-card, #ffffff);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+
+.product-from input[type="file"] {
+  font-size: 14px;
+  color: var(--text-muted, #6b7280);
+  padding: 8px 0;
+}
+
+.product-from input[type="file"]::-webkit-file-upload-button {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.product-from input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #4f46e5;
+}
+
+
+.product-from .error {
+  color: #ef4444; 
+  font-size: 13px;
+  font-weight: 500;
+  margin: 6px 0 0 0;
+  display: flex;
+  align-items: center;
+}
+
+
+.product-from .btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #6366f1;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.product-from .btn:hover:not(:disabled) {
+  background-color: #4f46e5;
+}
+
+
+.product-from .btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.7;
+}

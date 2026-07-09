@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-
+import "./Login.css";
 
 export const Login = () => {
     const {login} = useAuth()
@@ -34,33 +34,42 @@ export const Login = () => {
 
   }
    return (
-    <form onSubmit={handleSubmit} className="login-form">
-      <h2>Iniciar sesión</h2>
+    <div className="login-container">
+  <form onSubmit={handleSubmit} className="login-form">
+    <h2>Iniciar sesión</h2>
+    <p className="login-subtitle">Ingresá tus credenciales para acceder</p>
 
-      <div className="form-group">
-        <label>Email</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-      </div>
+    <div className="form-group">
+      <label htmlFor="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="ejemplo@correo.com"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+    </div>
 
-      <div className="form-group">
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-        />
-      </div>
+    <div className="form-group">
+      <label htmlFor="password">Contraseña</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="••••••••"
+        value={formData.password}
+        onChange={handleChange}
+        required
+      />
+    </div>
 
-      <button type="submit">Login</button>
-    </form>
+    <button type="submit" className="login-btn">
+      Ingresar
+    </button>
+  </form>
+</div>
   );
 
 }

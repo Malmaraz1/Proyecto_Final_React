@@ -1,0 +1,112 @@
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a1a1a;
+    background-color: var(--background-app);
+}
+
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    color: #111827;
+}
+
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+
+.btn.primary {
+    display: inline-block;
+    background-color: #6366f1;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.btn.primary:hover {
+    background-color: #4f46e5;
+}
+
+
+.dashboard-actions,
+.dashboard-help {
+    margin-bottom: 40px;
+}
+
+.dashboard-actions h3,
+.dashboard-help h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.action-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-card);
+    border: 1.5px solid #e5e7eb;
+    border-color: var(--border-color);
+    border-radius: 12px;
+    padding: 30px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-main);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.action-card:not(.disabled):hover {
+    background-color: #ffffff;
+    border-color: #6366f1;
+    color: #6366f1;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.1);
+}
+
+
+.action-card.disabled {
+    background-color: #f3f4f6;
+    border-color: #e5e7eb;
+    color: #9ca3af;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+.dashboard-help p {
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.6;
+}

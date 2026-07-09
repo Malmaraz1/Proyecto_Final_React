@@ -10,3 +10,26 @@
   flex-direction: column;
   min-height: 100vh; /* Ocupa el alto de la pantalla */
 }
+:root {
+  --background-app: #ffffff;
+  --background-card: #fafafa;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+}
+
+
+[data-theme="dark"] {
+  --background-app: #111827;      
+  --background-card: #1f2937;    
+  --text-main: #f9fafb;           
+  --text-muted: #9ca3af;       
+  --border-color: #374151;         
+}
+
+
+body {
+  background-color: var(--background-app);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza el cambio */
+}

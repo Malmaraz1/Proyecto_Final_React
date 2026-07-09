@@ -1,6 +1,6 @@
 import { Link} from "react-router-dom";
-import {LogoutButton} from "../../login/Logout"
-
+import { LogoutButton } from "../../../login/Logout";
+import "./dashboard.css";
 
 export const Dashboard = () => {
  
